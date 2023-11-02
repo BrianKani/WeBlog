@@ -1,12 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WEBlog</title>
+    <title>WeBlog App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Welcome to WEBlog</h1>
-    
+    <header>
+        <h1>Welcome to WeBlog</h1>
+        <a href="{{ url_for('login') }}">Login</a>
+        <!-- other features go here -->
+    </header>
+
+    <main>
+        <div class="posts">
+            <div class="post">
+                <h2>Post Title 1</h2>
+                <p>Post content goes here...</p>
+            </div>
+            <!-- Post2 -->
+            <div class="post">
+                <h2>Post Title 2</h2>
+                <p>Post content goes here...</p>
+            </div>
+            <!-- more posts dynamically -->
+        </div>
+    </main>
+
+    <footer>
+        <!-- Footer content -->
+    </footer>
 </body>
 </html>
